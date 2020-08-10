@@ -8,10 +8,6 @@ FROM page_visits;
 SELECT DISTINCT page_name
 FROM page_visits;
 
-/*
-Here's the first-touch query, in case you need it
-*/
-
 WITH first_touch AS (
     SELECT user_id,
         MIN(timestamp) as first_touch_at
